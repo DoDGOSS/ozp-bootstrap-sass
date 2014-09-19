@@ -1,3 +1,19 @@
+# OZONE Custom SASS conversion from LESS
+
+To convert our version of the bootstrap less found [here](https://github.com/ozone-development/bootstrap) you have to use Docker and a rails image to run a convert script provided by bootstrap-sass official. The script that you'll run (convert.rb) is already configured to pull from this repository, no additional configuration is required.
+
+1. Install [docker](http://docker.com)
+1. Pull the rails docker repository `docker pull rails`
+1. `docker run -i -t -v $(pwd):/tmp/bootstrap rails /bin/bash`
+1. `gem install sass term-ansicolor`
+1. `cd /tmp/bootstrap`
+1. `rake convert`
+1. `exit` will get you out of the container.
+
+This has updated all changed files in the scss (found under assets).
+
+
+
 # Bootstrap for Sass [![Gem Version](https://badge.fury.io/rb/bootstrap-sass.svg)](http://badge.fury.io/rb/bootstrap-sass) [![Bower Version](https://badge.fury.io/bo/bootstrap-sass-official.svg)](http://badge.fury.io/bo/bootstrap-sass-official) [![Build Status](http://img.shields.io/travis/twbs/bootstrap-sass.svg)](http://travis-ci.org/twbs/bootstrap-sass)
 
 `bootstrap-sass` is a Sass-powered version of [Bootstrap](http://github.com/twbs/bootstrap), ready to drop right into your Sass powered applications.
