@@ -17,15 +17,20 @@
 
     &:hover,
     &:focus {
+      background-color: $background;
       color: $color;
-      background-color: darken($background, 5%);
+      border-left: 4px darken($background, 10%) solid !important;
+      padding: 10px 15px 10px 12px;
     }
     &.active,
     &.active:hover,
     &.active:focus {
-      color: #fff;
-      background-color: $color;
-      border-color: $color;
+      background-color: $background;
+      color: $color;
+      border-color: $color !important;
+      border-left: 4px darken($background, 10%) solid !important;
+      padding: 10px 15px 10px 12px;
+      
     }
   }
 }

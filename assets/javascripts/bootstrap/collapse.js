@@ -24,6 +24,8 @@
 
   Collapse.VERSION  = '3.2.0'
 
+  Collapse.TRANSITION_DURATION = 350
+
   Collapse.DEFAULTS = {
     toggle: true
   }
@@ -72,7 +74,7 @@
 
     this.$element
       .one('bsTransitionEnd', $.proxy(complete, this))
-      .emulateTransitionEnd(350)[dimension](this.$element[0][scrollSize])
+      .emulateTransitionEnd(Collapse.TRANSITION_DURATION)[dimension](this.$element[0][scrollSize])
   }
 
   Collapse.prototype.hide = function () {
@@ -88,8 +90,7 @@
 
     this.$element
       .addClass('collapsing')
-      .removeClass('collapse')
-      .removeClass('in')
+      .removeClass('collapse in')
 
     this.transitioning = 1
 
@@ -106,7 +107,7 @@
     this.$element
       [dimension](0)
       .one('bsTransitionEnd', $.proxy(complete, this))
-      .emulateTransitionEnd(350)
+      .emulateTransitionEnd(Collapse.TRANSITION_DURATION)
   }
 
   Collapse.prototype.toggle = function () {
@@ -123,7 +124,7 @@
       var data    = $this.data('bs.collapse')
       var options = $.extend({}, Collapse.DEFAULTS, $this.data(), typeof option == 'object' && option)
 
-      if (!data && options.toggle && option == 'show') option = !option
+      if (!data && options.toggle && option == 'show') options.toggle = false
       if (!data) $this.data('bs.collapse', (data = new Collapse(this, options)))
       if (typeof option == 'string') data[option]()
     })
@@ -161,7 +162,7 @@
 
     if (!data || !data.transitioning) {
       if ($parent) $parent.find('[data-toggle="collapse"][data-parent="' + parent + '"]').not($this).addClass('collapsed')
-      $this[$target.hasClass('in') ? 'addClass' : 'removeClass']('collapsed')
+      $this.toggleClass('collapsed', $target.hasClass('in'))
     }
 
     Plugin.call($target, option)

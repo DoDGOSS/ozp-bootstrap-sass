@@ -35,7 +35,7 @@
   float: left;
   min-width: 160px;
   padding: 5px 0;
-  margin: 2px 0 0; // override default ul
+  margin: 2px -5px 0 0; // override default ul
   list-style: none;
   font-size: $font-size-base;
   text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
@@ -43,7 +43,7 @@
   border: 1px solid $dropdown-fallback-border; // IE8 fallback
   border: 1px solid $dropdown-border;
   border-radius: $border-radius-base;
-  @include box-shadow(0 6px 12px rgba(0,0,0,.175));
+  @include box-shadow(0 6px 12px rgba(25,31,37,.175));
   background-clip: padding-box;
 
   // Aligns the dropdown menu to right
@@ -77,7 +77,10 @@
   &:focus {
     text-decoration: none;
     color: $dropdown-link-hover-color;
-    background-color: $dropdown-link-hover-bg;
+    background-color: $dropdown-bg;
+    background-image: none;
+    border-left: 4px solid $dropdown-link-hover-color;
+    padding: 3px 20px 3px 16px;
   }
 }
 
@@ -89,7 +92,10 @@
     color: $dropdown-link-active-color;
     text-decoration: none;
     outline: 0;
-    background-color: $dropdown-link-active-bg;
+    background-color: $dropdown-bg;
+    background-image: none;
+    border-left: 4px solid $dropdown-link-hover-color;
+    padding: 3px 20px 3px 16px;
   }
 }
 
@@ -103,9 +109,8 @@
   &:focus {
     color: $dropdown-link-disabled-color;
   }
-}
-// Nuke hover/focus effects
-.dropdown-menu > .disabled > a {
+
+  // Nuke hover/focus effects
   &:hover,
   &:focus {
     text-decoration: none;
@@ -212,4 +217,3 @@
     }
   }
 }
-

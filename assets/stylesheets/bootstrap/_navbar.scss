@@ -92,7 +92,7 @@
   .navbar-collapse {
     max-height: $navbar-collapse-max-height;
 
-    @media (max-width: $screen-xs-min) and (orientation: landscape) {
+    @media (max-device-width: $screen-xs-min) and (orientation: landscape) {
       max-height: 200px;
     }
   }
@@ -171,6 +171,10 @@
   &:hover,
   &:focus {
     text-decoration: none;
+  }
+
+  > img {
+    display: block;
   }
 
   @media (min-width: $grid-float-breakpoint) {
@@ -271,26 +275,6 @@
         padding-bottom: $navbar-padding-vertical;
       }
     }
-
-    &.navbar-right:last-child {
-      margin-right: -$navbar-padding-horizontal;
-    }
-  }
-}
-
-
-// Component alignment
-//
-// Repurpose the pull utilities as their own navbar utilities to avoid specificity
-// issues with parents and chaining. Only do this when the navbar is uncollapsed
-// though so that navbar contents properly stack and align in mobile.
-
-@media (min-width: $grid-float-breakpoint) {
-  .navbar-left {
-    float: left !important;
-  }
-  .navbar-right {
-    float: right !important;
   }
 }
 
@@ -330,11 +314,6 @@
     padding-top: 0;
     padding-bottom: 0;
     @include box-shadow(none);
-
-    // Outdent the form if last child to line up with content down the page
-    &.navbar-right:last-child {
-      margin-right: -$navbar-padding-horizontal;
-    }
   }
 }
 
@@ -379,13 +358,32 @@
     float: left;
     margin-left: $navbar-padding-horizontal;
     margin-right: $navbar-padding-horizontal;
+  }
+}
 
-    // Outdent the form if last child to line up with content down the page
-    &.navbar-right:last-child {
+
+// Component alignment
+//
+// Repurpose the pull utilities as their own navbar utilities to avoid specificity
+// issues with parents and chaining. Only do this when the navbar is uncollapsed
+// though so that navbar contents properly stack and align in mobile.
+//
+// Declared after the navbar components to ensure more specificity on the margins.
+
+@media (min-width: $grid-float-breakpoint) {
+  .navbar-left {
+    float: left !important;
+  }
+  .navbar-right {
+    float: right !important;
+  margin-right: -$navbar-padding-horizontal;
+
+    ~ .navbar-right {
       margin-right: 0;
     }
   }
 }
+
 
 // Alternate navbars
 // --------------------------------------------------
@@ -416,6 +414,8 @@
       &:focus {
         color: $navbar-default-link-hover-color;
         background-color: $navbar-default-link-hover-bg;
+        border-bottom: $navbar-default-link-hover-color solid 4px;
+        padding-bottom: calc($navbar-padding-vertical - 4px);
       }
     }
     > .active > a {
@@ -424,6 +424,9 @@
       &:focus {
         color: $navbar-default-link-active-color;
         background-color: $navbar-default-link-active-bg;
+        background-image: none;
+        border-bottom: $navbar-default-link-active-color solid 4px;
+        padding-bottom: calc($navbar-padding-vertical - 4px);
       }
     }
     > .disabled > a {
@@ -461,6 +464,8 @@
       &:focus {
         background-color: $navbar-default-link-active-bg;
         color: $navbar-default-link-active-color;
+        border-bottom: $navbar-default-link-active-color solid 4px;
+        padding-bottom: calc($navbar-padding-vertical - 4px);
       }
     }
 
@@ -501,7 +506,7 @@
   // Add a class to ensure links outside the navbar nav are colored correctly.
 
   .navbar-link {
-    color: $navbar-default-link-color;
+    color: $navbar-default-link-hover-color;
     &:hover {
       color: $navbar-default-link-hover-color;
     }
@@ -550,6 +555,8 @@
       &:focus {
         color: $navbar-inverse-link-hover-color;
         background-color: $navbar-inverse-link-hover-bg;
+        border-bottom: $navbar-inverse-link-hover-color solid 4px;
+        padding-bottom: calc($navbar-padding-vertical - 4px);
       }
     }
     > .active > a {
@@ -558,6 +565,9 @@
       &:focus {
         color: $navbar-inverse-link-active-color;
         background-color: $navbar-inverse-link-active-bg;
+        background-image: none;
+        border-bottom: $navbar-inverse-link-active-color solid 4px;
+        padding-bottom: calc($navbar-padding-vertical - 4px);
       }
     }
     > .disabled > a {
@@ -593,8 +603,10 @@
       &,
       &:hover,
       &:focus {
-        background-color: $navbar-inverse-link-active-bg;
-        color: $navbar-inverse-link-active-color;
+        background-color: $navbar-inverse-link-hover-bg;
+        color: $navbar-inverse-link-hover-color;
+        border-bottom: $navbar-inverse-link-hover-color solid 4px;
+        padding-bottom: calc($navbar-padding-vertical - 4px);
       }
     }
 
@@ -613,6 +625,8 @@
           &:focus {
             color: $navbar-inverse-link-hover-color;
             background-color: $navbar-inverse-link-hover-bg;
+            border-bottom: $navbar-inverse-link-hover-color solid 4px;
+            padding-bottom: calc($navbar-padding-vertical - 4px);
           }
         }
         > .active > a {
@@ -621,6 +635,8 @@
           &:focus {
             color: $navbar-inverse-link-active-color;
             background-color: $navbar-inverse-link-active-bg;
+            border-bottom: $navbar-inverse-link-active-color solid 4px;
+            padding-bottom: calc($navbar-padding-vertical - 4px);
           }
         }
         > .disabled > a {

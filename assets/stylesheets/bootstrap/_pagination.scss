@@ -43,6 +43,10 @@
       color: $pagination-hover-color;
       background-color: $pagination-hover-bg;
       border-color: $pagination-hover-border;
+      
+      + li {
+        border-left: $pagination-hover-border;
+      }
     }
   }
 
@@ -51,11 +55,14 @@
     &,
     &:hover,
     &:focus {
-      z-index: 2;
       color: $pagination-active-color;
       background-color: $pagination-active-bg;
       border-color: $pagination-active-border;
       cursor: default;
+      
+      + li {
+        border-left: $pagination-active-border;  
+      }
     }
   }
 
