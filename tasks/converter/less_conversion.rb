@@ -122,7 +122,7 @@ class Converter
           when 'type.less'
             file = apply_mixin_parent_selector(file, '\.(text|bg)-(success|primary|info|warning|danger)')
             # .bg-primary will not get patched automatically as it includes an additional rule. fudge for now
-            file = replace_all(file, "  @include bg-variant($brand-primary);\n}", "}\n@include bg-variant('.bg-primary', $brand-primary);")
+            # file = replace_all(file, "  @include bg-variant($brand-primary);\n}", "}\n@include bg-variant('.bg-primary', $brand-primary);")
         end
 
         name    = name.sub(/\.less$/, '.scss')
