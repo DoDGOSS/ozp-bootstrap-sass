@@ -4,7 +4,7 @@ To convert our version of the bootstrap less found [here](https://github.com/ozo
 
 1. Install [docker](http://docker.com)
 1. Pull the rails docker repository `docker pull ozplatform/bootstrap-sass`
-1. `docker run -i -t -v $(pwd):/tmp/bootstrap ozplatform-sass`
+1. `docker run -i -t -v $(pwd):/tmp/bootstrap ozplatform/bootstrap-sass`
 
 This has updated all changed files in the scss (found under assets). To make these available to all projects with ozp-bootstrap as a dependency, push to master.
 
