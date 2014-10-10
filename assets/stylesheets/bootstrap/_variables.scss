@@ -56,9 +56,10 @@ $body-bg:               $white !default;
 $text-color:            $gray-darker !default;
 
 //** Global textual link color.
-$link-color:            $brand-primary !default;
+$link-color:            $blue-dark !default;
 //** Link hover color set via `darken()` function.
-$link-hover-color:      $blue-dark !default;
+$link-hover-color:      $brand-primary !default;
+
 
 
 //== Typography
@@ -170,7 +171,7 @@ $table-border-color:            $gray-lighter !default;
 
 $btn-font-weight:                300 !default;
 
-$btn-default-color:              $blue !default;
+$btn-default-color:              $gray-dark !default;
 $btn-default-bg:                 $white !default;
 $btn-default-border:             $gray-dark !default;
 
@@ -434,9 +435,7 @@ $navbar-inverse-toggle-border-color:        $navbar-inverse-border !default;
 
 //=== Shared nav styles
 $nav-link-padding:                          10px 15px !default;
-$nav-link-padding-side:                     15px;
 $nav-link-hover-bg:                         $gray-lightest !default;
-$nav-link-bg:                               $white;
 
 $nav-disabled-link-color:                   $gray !default;
 $nav-disabled-link-hover-color:             $gray !default;
