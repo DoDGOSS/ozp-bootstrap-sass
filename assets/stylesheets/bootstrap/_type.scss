@@ -120,16 +120,20 @@ mark,
 // safely shift things around (per SemVer rules).
 .bg-primary {
     color: $white;
-    @include bg-variant($brand-primary);
+    // @include bg-variant($brand-primary);
 }
-
-@include bg-variant('.bg-success', $state-success-bg);
-
-@include bg-variant('.bg-info', $state-info-bg);
-
-@include bg-variant('.bg-warning', $state-warning-bg);
-
-@include bg-variant('.bg-danger', $state-danger-bg);
+// .bg-success {
+//   @include bg-variant($state-success-bg);
+// }
+// .bg-info {
+//   @include bg-variant($state-info-bg);
+// }
+// .bg-warning {
+//   @include bg-variant($state-warning-bg);
+// }
+// .bg-danger {
+//   @include bg-variant($state-danger-bg);
+// }
 
 
 // Page header
