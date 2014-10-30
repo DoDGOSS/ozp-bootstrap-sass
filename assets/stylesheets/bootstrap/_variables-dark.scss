@@ -52,7 +52,9 @@ $text-color:		$white;
 //** Global textual link color.
 $link-color:		$blue-light;
 //** Link hover color set via `darken()` function.
-$link-hover-color:	$yellow;
+$link-hover-color:	$white;
+
+$focus-color: $blue-light;
 
 $highlight: $yellow;
 $highlight-text: $gray-base;
@@ -231,20 +233,20 @@ $input-group-addon-border-color: $input-border;
 //## Dropdown menu container and contents
 
 //** Background for the dropdown menu.
-$dropdown-bg:				 $gray-dark;
+$dropdown-bg:				 $gray-darkest;
 //** Dropdown menu 'border-color'.
 $dropdown-border:			 $gray-darkest;
 //** Dropdown menu 'border-color' **for IE8**.
-$dropdown-fallback-border:	 $gray-darker;
+$dropdown-fallback-border:	 $gray-darkest;
 //** Divider color for between dropdown items.
-$dropdown-divider-bg:        $gray-darkest;
+$dropdown-divider-bg:        $gray-darker;
 
 //** Dropdown link text color.
 $dropdown-link-color:		 $text-color;
 //** Hover color for dropdown links.
-$dropdown-link-hover-color:	 $yellow;
+$dropdown-link-hover-color:	 $white;
 //** Hover background for dropdown links.
-$dropdown-link-hover-bg:	 $body-bg;
+$dropdown-link-hover-bg:	 $dropdown-bg;
 
 //** Active dropdown menu item text color.
 $dropdown-link-active-color: $blue-light;
@@ -252,10 +254,10 @@ $dropdown-link-active-color: $blue-light;
 $dropdown-link-active-bg:	 $dropdown-bg;
 
 //** Disabled dropdown menu item background color.
-$dropdown-link-disabled-color:	$gray-lighter;
+$dropdown-link-disabled-color:	$gray-light;
 
 //** Text color for headers within dropdown menus.
-$dropdown-header-color:		 $gray-lightest;
+$dropdown-header-color:		 $blue-light;
 
 //** Deprecated `$dropdown-caret-color` as of v3.1.0
 $dropdown-caret-color:		 $text-color;
@@ -363,14 +365,14 @@ $navbar-padding-vertical:          (($navbar-height - $line-height-computed) / 2
 $navbar-collapse-max-height:       340px;
 
 $navbar-default-color:             $text-color;
-$navbar-default-bg:                $body-bg;
+$navbar-default-bg:                $dropdown-bg;
 $navbar-default-border:            $gray-lighter;
 
 // Navbar links
-$navbar-default-link-color:                $text-color;
-$navbar-default-link-hover-color:          $link-color;
+$navbar-default-link-color:                $gray-lighter;
+$navbar-default-link-hover-color:          $white;
 $navbar-default-link-hover-bg:             transparent;
-$navbar-default-link-active-color:         $link-color;
+$navbar-default-link-active-color:         $blue-light;
 $navbar-default-link-active-bg:            transparent;
 $navbar-default-link-disabled-color:       $gray;
 $navbar-default-link-disabled-bg:          transparent;
@@ -381,9 +383,9 @@ $navbar-default-brand-hover-color:         $navbar-default-link-hover-color;
 $navbar-default-brand-hover-bg:            transparent;
 
 // Navbar toggle
-$navbar-default-toggle-hover-bg:           $body-bg;
-$navbar-default-toggle-icon-bar-bg:        $body-bg;
-$navbar-default-toggle-border-color:       $gray-lighter;
+$navbar-default-toggle-hover-bg:           transparent;
+$navbar-default-toggle-icon-bar-bg:        transparent;
+$navbar-default-toggle-border-color:       $blue-light;
 
 // Inverted navbar
 // Reset inverted navbar basics
@@ -402,7 +404,7 @@ $navbar-inverse-link-disabled-bg:           transparent;
 
 // Inverted navbar brand label
 $navbar-inverse-brand-color:                $white;
-$navbar-inverse-brand-bg:					$gray-base;
+$navbar-inverse-brand-bg:					          $gray-base;
 $navbar-inverse-brand-hover-color:          $navbar-inverse-link-hover-color;
 $navbar-inverse-brand-hover-bg:             transparent;
 
@@ -419,7 +421,7 @@ $navbar-inverse-toggle-border-color:        $navbar-inverse-border;
 //=== Shared nav styles
 $nav-link-padding:                          10px $nav-link-padding-side;
 $nav-link-padding-side:                     15px;
-$nav-link-hover-bg:					    	           $gray-darkest;
+$nav-link-hover-bg:					    	          transparent;
 $nav-link-bg:                               $gray-base;
 
 $nav-disabled-link-color:               $gray-light;

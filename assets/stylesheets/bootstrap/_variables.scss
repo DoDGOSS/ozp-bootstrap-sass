@@ -57,10 +57,10 @@ $text-color:            $gray-darker !default;
 
 //** Global textual link color.
 $link-color:            $blue-dark !default;
-//** Link hover color set via `darken()` function.
+//** Link hover color
 $link-hover-color:      $brand-primary !default;
-
-
+//** Focus color
+$focus-color: $brand-primary !default;
 
 //== Typography
 //
@@ -208,9 +208,9 @@ $input-bg:                       $white !default;
 $input-bg-disabled:              $gray-lighter !default;
 
 //** Text color for `<input>`s
-$input-color:                    $gray-base !default;
+$input-color:                    $gray-dark !default;
 //** `<input>` border color
-$input-border:                   #ccc !default;
+$input-border:                   $gray-lighter !default;
 
 // TODO: Rename `$input-border-radius` to `$input-border-radius-base` in v4
 //** Default `.form-control` border radius
@@ -258,9 +258,9 @@ $dropdown-divider-bg:            $gray-lighter !default;
 //** Dropdown link text color.
 $dropdown-link-color:            $text-color !default;
 //** Hover color for dropdown links.
-$dropdown-link-hover-color:      $link-color !default;
+$dropdown-link-hover-color:      $text-color !default;
 //** Hover background for dropdown links.
-$dropdown-link-hover-bg:         $body-bg !default;
+$dropdown-link-hover-bg:         transparent !default;
 
 //** Active dropdown menu item text color.
 $dropdown-link-active-color:     $blue !default;
@@ -381,11 +381,11 @@ $navbar-collapse-max-height:       340px !default;
 
 $navbar-default-color:             $text-color !default;
 $navbar-default-bg:                $body-bg !default;
-$navbar-default-border:            $gray-lighter !default;
+$navbar-default-border:            $blue !default;
 
 // Navbar links
 $navbar-default-link-color:                $text-color !default;
-$navbar-default-link-hover-color:          $link-color !default;
+$navbar-default-link-hover-color:          $text-color !default;
 $navbar-default-link-hover-bg:             transparent !default;
 $navbar-default-link-active-color:         $link-color !default;
 $navbar-default-link-active-bg:            transparent !default;
