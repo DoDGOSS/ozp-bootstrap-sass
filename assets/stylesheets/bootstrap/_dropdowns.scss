@@ -35,7 +35,7 @@
   float: left;
   min-width: 160px;
   padding: 5px 0;
-  margin: 2px -5px 0 0; // override default ul
+  margin: 2px 0 0 0; // override default ul
   list-style: none;
   font-size: $font-size-base;
   text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
@@ -80,7 +80,7 @@
     color: $dropdown-link-hover-color;
     background-color: $dropdown-bg;
     background-image: none;
-    border-left: 4px solid $dropdown-link-hover-color;
+    border-left: 4px solid $dropdown-link-active-color;
     padding: 3px 20px 3px 16px;
   }
   & > i{
