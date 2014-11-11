@@ -127,10 +127,11 @@ hr {
   width: 1px;
   height: 1px;
   margin: -1px;
-  padding: 0;
+  padding: 0 !important;
   overflow: hidden;
   clip: rect(25,31,37,0);
-  border: 0;
+  border: 0 !important;
+  background: transparent !important;
 }
 
 // Use in conjunction with .sr-only to only display content when it's focused.
