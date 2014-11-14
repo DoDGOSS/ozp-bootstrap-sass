@@ -232,7 +232,7 @@
 
 .navbar-nav {
   margin: ($navbar-padding-vertical / 2) (-$navbar-padding-horizontal);
-
+  
   > li > a {
     padding-top:    10px;
     padding-bottom: 10px;
@@ -377,6 +377,11 @@
 @media (min-width: $grid-float-breakpoint) {
   .navbar-left {
     float: left !important;
+  margin-left: -$navbar-padding-horizontal; 
+
+    ~ .navbar-left {
+      margin-left: 0;
+    }
   }
   .navbar-right {
     float: right !important;
@@ -420,7 +425,7 @@
       &:focus {
         color: $navbar-default-link-hover-color;
         background-color: $navbar-default-link-hover-bg;
-        border-top-color: $navbar-default-link-hover-color;
+        border-top-color: $navbar-default-link-active-color;
       }
     }
     > .active > a {
@@ -570,11 +575,10 @@
       &:focus {
         color: $navbar-inverse-link-hover-color;
         background-color: $navbar-inverse-link-hover-bg;
-        border-top-color: $navbar-inverse-link-hover-color;
       }
     }
     > .active > a {
-      border-top: 4px solid transparent;
+
       padding-top: ($navbar-padding-vertical - 4px);
 
       &,
@@ -623,9 +627,8 @@
       &,
       &:hover,
       &:focus {
-        background-color: $navbar-inverse-link-hover-bg;
+        background-color: $dropdown-bg;
         color: $navbar-inverse-link-hover-color;
-        border-top-color: $navbar-inverse-link-hover-color;
       }
     }
 

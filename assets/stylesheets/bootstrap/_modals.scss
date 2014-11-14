@@ -96,6 +96,7 @@
 .modal-body {
   position: relative;
   padding: $modal-inner-padding;
+  background: $modal-body-bg;
 }
 
 // Footer (for actions)

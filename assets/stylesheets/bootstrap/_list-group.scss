@@ -62,7 +62,7 @@ a.list-group-item {
   &:hover,
   &:focus {
     text-decoration: none;
-    color: $list-group-link-hover-color;
+    color: $list-group-link-color;
     background-color: $list-group-hover-bg;
     border-left: 4px $list-group-link-hover-color solid;
     padding: 10px 15px 10px 12px;

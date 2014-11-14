@@ -11,6 +11,7 @@
   @include clearfix();
   li {
     display: inline;
+    color: $gray-lightest;
     > a,
     > span {
       display: inline-block;

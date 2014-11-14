@@ -8,12 +8,12 @@
   font-size: ($font-size-base * 1.5);
   font-weight: $close-font-weight;
   line-height: 1;
-  color: $gray-dark;
+  color: $text-color;
   text-shadow: $close-text-shadow;
 
   &:hover,
   &:focus {
-    color: $red;
+    color: $text-color-variant;
     text-decoration: none;
     cursor: pointer;
   }

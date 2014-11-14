@@ -33,15 +33,16 @@
   z-index: $zindex-dropdown;
   display: none; // none by default, but block on "open" of the menu
   float: left;
-  min-width: 160px;
-  padding: 5px 0;
+  min-width: 260px;
+  padding: 15px 0;
   margin: 2px 0 0 0; // override default ul
   list-style: none;
   font-size: $font-size-base;
+  font-weight: 300;
   text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
   background-color: $dropdown-bg;
-  border: 1px solid $dropdown-fallback-border; // IE8 fallback
-  border: 1px solid $dropdown-border;
+  //border: 1px solid $dropdown-fallback-border; // IE8 fallback
+  //border: 1px solid $dropdown-border;
   border-radius: $border-radius-base;
   @include box-shadow(0 6px 12px rgba(25,31,37,.175));
   background-clip: padding-box;
@@ -57,18 +58,43 @@
   // Dividers (basically an hr) within the dropdown
   .divider {
     @include nav-divider($dropdown-divider-bg);
+    margin-right: 20px;
+    margin-left: 20px;
   }
 
   // Links within the dropdown menu
   > li > a {
     display: block;
-    padding: 3px 20px 3px 16px;
+    padding: 5px 25px 5px 21px;
     border-left: 4px solid transparent;
     clear: both;
     font-weight: normal;
     line-height: $line-height-base;
     color: $dropdown-link-color;
-    white-space: nowrap; // prevent links from randomly breaking onto new lines
+    //white-space: nowrap; // prevent links from randomly breaking onto new lines
+    
+        > i {
+            padding-right: 15px;
+        }
+    
+        > .img-thumbnail {
+            margin-left: -10px;
+            padding-right: 15px;
+        }
+
+        // Highlighted link at the end
+        &.caboose {
+            background: $dropdown-caboose-bg;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            margin-top: 15px;
+            margin-bottom: -15px;
+
+            &:hover,
+            &:focus {
+                background: $dropdown-caboose-bg;
+            }
+        }
   }
 }
 
@@ -81,7 +107,6 @@
     background-color: $dropdown-bg;
     background-image: none;
     border-left: 4px solid $dropdown-link-active-color;
-    padding: 3px 20px 3px 16px;
   }
   & > i{
     &:hover,
@@ -104,7 +129,6 @@
     background-color: $dropdown-bg;
     background-image: none;
     border-left: 4px solid $dropdown-link-hover-color;
-    padding: 3px 20px 3px 16px;
   }
 }
 
@@ -165,8 +189,10 @@
 // Dropdown section headers
 .dropdown-header {
   display: block;
-  padding: 3px 20px;
-  font-size: $font-size-small;
+  padding: 10px 20px;
+  font-weight: bold;
+  font-size: $font-size-base;
+  font-weight: 300;
   line-height: $line-height-base;
   color: $dropdown-header-color;
   white-space: nowrap; // as with > li > a

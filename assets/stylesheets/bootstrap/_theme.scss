@@ -34,7 +34,7 @@
 }
 
 // Mixin for generating new styles
-@mixin btn-styles($btn-color: #555) {
+@mixin btn-styles($btn-color: $gray-lighter) {
   @include gradient-vertical($start-color: $btn-color, $end-color: darken($btn-color, 12%));
   @include reset-filter(); // Disable gradients for IE9 because filter bleeds through rounded corners
   background-repeat: repeat-x;
@@ -70,25 +70,25 @@
 
 
 .btn-default {
-  @include gradient-vertical($start-color: $white, $end-color: $gray-lightest);
+  @include gradient-vertical($start-color: $btn-default-bg, $end-color: $btn-default-bg);
   @include reset-filter(); // Disable gradients for IE9 because filter bleeds through rounded corners
   background-repeat: repeat-x;
   text-shadow: none;
-  border-color: $gray-dark;
+  border-color: $btn-default-border;
   
   &:hover,
   &:focus  {
-    @include gradient-vertical($start-color: $blue, $end-color: darken($blue, 12%));
+    @include gradient-vertical($start-color: $btn-primary-bg, $end-color: darken($btn-primary-bg, 12%));
     @include reset-filter(); // Disable gradients for IE9 because filter bleeds through rounded corners
     color: $white;
-    border-color: $blue-dark;
+    border-color: $btn-primary-border;
   }
 
   &:active,
   &.active {
-    background-color: $blue-dark;
+    background-color: $btn-primary-bg;
     color: $white;
-    border-color: $blue-darker;
+    border-color: $btn-primary-border;
   }
 
   &:disabled,

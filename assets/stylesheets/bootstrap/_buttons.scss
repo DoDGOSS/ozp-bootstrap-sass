@@ -58,8 +58,46 @@
 // --------------------------------------------------
 
 .btn-default {
-  @include button-variant($btn-default-color, $btn-default-bg, $btn-default-border);
+  color: $btn-default-color;
+  background-color: $btn-default-bg;
+  border-color: $btn-default-border;
+
+  &:hover,
+  &:focus,
+  &.focus,
+  &:active,
+  &.active,
+  .open > .dropdown-toggle& {
+    color: $btn-info-color;
+    background-color: $btn-info-bg;
+    border-color: $btn-info-border;
+  }
+  &:active,
+  &.active,
+  .open > .dropdown-toggle& {
+    background-image: none;
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &,
+    &:hover,
+    &:focus,
+    &.focus,
+    &:active,
+    &.active {
+        background-color: $btn-default-bg;
+            border-color: $btn-default-border;
+    }
+  }
+
+  .badge {
+    color: $btn-default-bg;
+    background-color: $btn-default-color;
+  }
+
 }
+
 .btn-primary {
   @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
 }
@@ -106,7 +144,7 @@
   }
   &:hover,
   &:focus {
-    color: $link-hover-color;
+    color: $link-color;
     text-decoration: underline;
     background-color: transparent;
   }
