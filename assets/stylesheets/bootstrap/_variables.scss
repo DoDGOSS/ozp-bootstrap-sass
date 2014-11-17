@@ -388,13 +388,13 @@ $navbar-collapse-max-height:       340px !default;
 
 $navbar-default-color:             $text-color !default;
 $navbar-default-bg:                $body-bg !default;
-$navbar-default-border:            $blue !default;
+$navbar-default-border:            $gray-lighter !default;
 
 // Navbar links
 $navbar-default-link-color:                $text-color !default;
 $navbar-default-link-hover-color:          $text-color !default;
 $navbar-default-link-hover-bg:             transparent !default;
-$navbar-default-link-active-color:         $link-color !default;
+$navbar-default-link-active-color:         $blue !default;
 $navbar-default-link-active-bg:            transparent !default;
 $navbar-default-link-disabled-color:       $gray !default;
 $navbar-default-link-disabled-bg:          transparent !default;
@@ -412,23 +412,23 @@ $navbar-default-toggle-border-color:       $gray-lighter !default;
 
 // Inverted navbar
 // Reset inverted navbar basics
-$navbar-inverse-color:                      $white !default;
-$navbar-inverse-bg:                         $gray-darkest !default;
-$navbar-inverse-border:                     $gray-base !default;
+$navbar-inverse-color:                      $navbar-default-color !default;
+$navbar-inverse-bg:                         $navbar-default-bg !default;
+$navbar-inverse-border:                     $navbar-default-border !default;
 
 // Inverted navbar links
-$navbar-inverse-link-color:                 $white !default;
-$navbar-inverse-link-hover-color:           $yellow !default;
-$navbar-inverse-link-hover-bg:              transparent !default;
-$navbar-inverse-link-active-color:          $blue-light !default;
-$navbar-inverse-link-active-bg:             transparent !default;
-$navbar-inverse-link-disabled-color:        $gray-light !default;
-$navbar-inverse-link-disabled-bg:           transparent !default;
+$navbar-inverse-link-color:                 $navbar-default-link-color !default;
+$navbar-inverse-link-hover-color:           $navbar-default-link-hover-color !default;
+$navbar-inverse-link-hover-bg:              $navbar-default-link-hover-bg !default;
+$navbar-inverse-link-active-color:          $navbar-default-link-active-color !default;
+$navbar-inverse-link-active-bg:             $navbar-default-link-active-bg !default;
+$navbar-inverse-link-disabled-color:        $navbar-default-link-disabled-color !default;
+$navbar-inverse-link-disabled-bg:           $navbar-default-link-disabled-bg !default;
 
 // Inverted navbar brand label
-$navbar-inverse-brand-color:                $white !default;
-$navbar-inverse-brand-hover-color:          $navbar-inverse-link-hover-color !default;
-$navbar-inverse-brand-hover-bg:             transparent !default;
+$navbar-inverse-brand-color:                $navbar-default-brand-color !default;
+$navbar-inverse-brand-hover-color:          $navbar-default-brand-hover-color !default;
+$navbar-inverse-brand-hover-bg:             $navbar-default-brand-hover-bg !default;
 
 // Inverted navbar toggle
 $navbar-inverse-toggle-hover-bg:            $navbar-inverse-bg !default;
@@ -441,9 +441,9 @@ $navbar-inverse-toggle-border-color:        $navbar-inverse-border !default;
 //##
 
 //=== Shared nav styles
-$nav-link-padding:                          $nav-link-padding-vertical $nav-link-padding-side !default;
 $nav-link-padding-side:                     15px !default;
 $nav-link-padding-vertical:                 10px !default;
+$nav-link-padding:                          $nav-link-padding-vertical $nav-link-padding-side !default;
 $nav-link-hover-bg:                         $gray-lightest !default;
 $nav-link-bg:                               $white !default;
 
@@ -457,9 +457,9 @@ $nav-tabs-link-hover-border-color:          $blue !default;
 
 $nav-tabs-active-link-hover-bg:             $white !default;
 $nav-tabs-active-link-hover-color:          $gray-darker !default;
-$nav-tabs-active-link-hover-border-color:   $blue !default;
+$nav-tabs-active-link-hover-border-color:   $blue-dark !default;
 
-$nav-tabs-active-link-color:                $blue !default;
+$nav-tabs-active-link-color:                $blue-dark !default;
 
 $nav-tabs-justified-link-border-color:            $nav-tabs-border-color !default;
 $nav-tabs-justified-active-link-border-color:     $nav-tabs-active-link-hover-border-color !default;

@@ -15,7 +15,7 @@
   > li {
     position: relative;
     display: block;
-
+    
     > a {
       position: relative;
       display: block;
@@ -79,7 +79,7 @@
 
 // Give the tabs something to sit on
 .nav-tabs {
-  border-bottom: 4px solid $nav-tabs-active-link-hover-bg;
+  border-bottom: 4px solid $nav-tabs-border-color;
   padding-left: 30px;
   > li {
     float: left;
@@ -133,6 +133,8 @@
     // Links rendered as pills
     > a {
       border-radius: $nav-pills-border-radius;
+      color: $text-color;
+      background: $nav-link-bg;
       &:hover,
       &:focus {
         border-top: 4px solid $nav-tabs-active-link-hover-border-color;
@@ -165,7 +167,7 @@
     border: 0;
     
     > a {
-
+      
       &:hover,
       &:focus {
         border: 0;
@@ -237,6 +239,7 @@
   > li > a {
     // Override margin from .nav-tabs
     margin-right: 0;
+    margin-left: -1px;
     border-radius: $border-radius-base;
   }
 

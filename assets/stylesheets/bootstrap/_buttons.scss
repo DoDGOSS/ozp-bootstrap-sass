@@ -67,14 +67,14 @@
   &.focus,
   &:active,
   &.active,
-  .open > .dropdown-toggle& {
+  .open > &.dropdown-toggle {
     color: $btn-info-color;
     background-color: $btn-info-bg;
     border-color: $btn-info-border;
   }
   &:active,
   &.active,
-  .open > .dropdown-toggle& {
+  .open > &.dropdown-toggle {
     background-image: none;
   }
   &.disabled,

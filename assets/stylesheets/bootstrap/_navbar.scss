@@ -331,6 +331,7 @@
 }
 // Menu position and menu caret support for dropups via extra dropup class
 .navbar-fixed-bottom .navbar-nav > li > .dropdown-menu {
+  @include border-top-radius($navbar-border-radius);
   @include border-bottom-radius(0);
 }
 
@@ -377,7 +378,7 @@
 @media (min-width: $grid-float-breakpoint) {
   .navbar-left {
     float: left !important;
-  margin-left: -$navbar-padding-horizontal; 
+  margin-left: -$navbar-padding-horizontal;
 
     ~ .navbar-left {
       margin-left: 0;
@@ -568,18 +569,18 @@
   .navbar-nav {
     > li > a {
       color: $navbar-inverse-link-color;
-      border-top: 4px solid transparent;
-      padding-top: ($navbar-padding-vertical - 4px);
+      border-bottom: 4px solid transparent;
+      padding-bottom: ($navbar-padding-vertical - 4px);
 
       &:hover,
       &:focus {
         color: $navbar-inverse-link-hover-color;
         background-color: $navbar-inverse-link-hover-bg;
+        border-bottom-color: $navbar-inverse-link-active-color;
       }
     }
     > .active > a {
-
-      padding-top: ($navbar-padding-vertical - 4px);
+      padding-bottom: ($navbar-padding-vertical - 4px);
 
       &,
       &:hover,
@@ -587,7 +588,7 @@
         color: $navbar-inverse-link-active-color;
         background-color: $navbar-inverse-link-active-bg;
         background-image: none;
-        border-top-color: $navbar-inverse-link-active-color;
+        border-bottom-color: $navbar-inverse-link-active-color;
       }
     }
     > .disabled > a {
@@ -621,8 +622,8 @@
   .navbar-nav {
     > .open > a {
 
-      border-top: 4px solid transparent;
-      padding-top: ($navbar-padding-vertical - 4px);
+      border-bottom: 4px solid transparent;
+      padding-bottom: ($navbar-padding-vertical - 4px);
 
       &,
       &:hover,
@@ -643,26 +644,26 @@
         }
         > li > a {
           color: $navbar-inverse-link-color;
-          border-top: 4px solid transparent;
-          padding-top: ($navbar-padding-vertical - 4px);
+          border-bottom: 4px solid transparent;
+          padding-bottom: ($navbar-padding-vertical - 4px);
 
           &:hover,
           &:focus {
             color: $navbar-inverse-link-hover-color;
             background-color: $navbar-inverse-link-hover-bg;
-            border-top-color: $navbar-inverse-link-hover-color;
+            border-bottom-color: $navbar-inverse-link-hover-color;
           }
         }
         > .active > a {
-          border-top: 4px solid transparent ;
-          padding-top: ($navbar-padding-vertical - 4px);
+          border-bottom: 4px solid transparent ;
+          padding-bottom: ($navbar-padding-vertical - 4px);
 
           &,
           &:hover,
           &:focus {
             color: $navbar-inverse-link-active-color;
             background-color: $navbar-inverse-link-active-bg;
-            border-top-color: $navbar-inverse-link-active-color;
+            border-bottom-color: $navbar-inverse-link-active-color;
           }
         }
         > .disabled > a {
