@@ -31,12 +31,16 @@
   .badge {
     text-shadow: none;
   }
+
+  .badge {
+    text-shadow: none;
+  }
 }
 
 // Mixin for generating new styles
 @mixin btn-styles($btn-color: $gray-lighter) {
   @include gradient-vertical($start-color: $btn-color, $end-color: darken($btn-color, 12%));
-  @include reset-filter(); // Disable gradients for IE9 because filter bleeds through rounded corners
+  @include reset-filter; // Disable gradients for IE9 because filter bleeds through rounded corners
   background-repeat: repeat-x;
   border-color: darken($btn-color, 14%);
 
@@ -138,7 +142,7 @@
 
 // Inverted navbar
 .navbar-inverse {
-  @include reset-filter(); // Remove gradient in IE<10 to fix bug where dropdowns don't get triggered
+  @include reset-filter; // Remove gradient in IE<10 to fix bug where dropdowns don't get triggered
 
   .navbar-nav > .open > a,
   .navbar-nav > .active > a {
@@ -219,7 +223,7 @@
 // Reset the striped class because our mixins don't do multiple gradients and
 // the above custom styles override the new `.progress-bar-striped` in v3.2.0.
 .progress-bar-striped {
-  @include gradient-striped();
+  @include gradient-striped;
 }
 
 
