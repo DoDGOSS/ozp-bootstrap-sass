@@ -98,6 +98,8 @@ class Converter
               // [converter] Asset helpers such as Sprockets and Node.js Mincer do not resolve relative paths
               \\1: if($bootstrap-sass-asset-helper, "bootstrap/", "\\2bootstrap/") \\3;
             SCSS
+          when 'buttons.less'
+            file = replace_all file, /(\.dropdown-toggle)&/, '&\1'
           when 'close.less'
             # extract .close { button& {...} } rule
             file = extract_nested_rule file, 'button&'
