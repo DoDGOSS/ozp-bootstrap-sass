@@ -84,7 +84,7 @@
   > li {
     float: left;
     // Make the list-items overlay the bottom border
-    margin-bottom: -1px;
+    margin-bottom: 0;
     // Make the list-items show only a single border on each side
     margin-left: -1px;
     background-color: $nav-link-bg;

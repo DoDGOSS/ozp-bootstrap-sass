@@ -31,10 +31,6 @@
   .badge {
     text-shadow: none;
   }
-
-  .badge {
-    text-shadow: none;
-  }
 }
 
 // Mixin for generating new styles
@@ -75,7 +71,7 @@
 
 .btn-default {
   @include gradient-vertical($start-color: $btn-default-bg, $end-color: $btn-default-bg);
-  @include reset-filter(); // Disable gradients for IE9 because filter bleeds through rounded corners
+  @include reset-filter; // Disable gradients for IE9 because filter bleeds through rounded corners
   background-repeat: repeat-x;
   text-shadow: none;
   border-color: $btn-default-border;
@@ -83,7 +79,7 @@
   &:hover,
   &:focus  {
     @include gradient-vertical($start-color: $btn-primary-bg, $end-color: darken($btn-primary-bg, 12%));
-    @include reset-filter(); // Disable gradients for IE9 because filter bleeds through rounded corners
+    @include reset-filter; // Disable gradients for IE9 because filter bleeds through rounded corners
     color: $white;
     border-color: $btn-primary-border;
   }

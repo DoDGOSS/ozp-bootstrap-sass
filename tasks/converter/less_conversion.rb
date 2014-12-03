@@ -145,9 +145,15 @@ class Converter
       save_file main_to, File.read(main_from).gsub(/ "/, ' "bootstrap/')
       File.delete(main_from)
 
+      # move bootstrap/_bootstrap.scss to _bootstrap.scss adjusting import paths
+      main_from = "#{save_to}/_bootstrap-dark.scss"
+      main_to   = File.expand_path("#{save_to}/../_bootstrap-dark.scss")
+      save_file main_to, File.read(main_from).gsub(/ "/, ' "bootstrap/')
+      File.delete(main_from)
+
       # generate variables template
       save_file 'templates/project/_bootstrap-variables.sass',
-                "// Override Bootstrap variables here (defaults from bootstrap-sass v#{Bootstrap::VERSION}):\n\n" +
+                "// Override Bootstrap variables here (defaults from bootstrap-sass):\n\n" +
                     File.read("#{save_to}/_variables.scss").gsub(/^(?=\$)/, '// ').gsub(/ !default;/, '')
     end
 

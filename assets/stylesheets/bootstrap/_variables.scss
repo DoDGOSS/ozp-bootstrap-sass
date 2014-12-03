@@ -13,31 +13,28 @@ $bootstrap-sass-asset-helper: (twbs-font-path("") != unquote('twbs-font-path("")
 //## Gray and brand colors for use across Bootstrap.
 
 $gray-base:              #191f25 !default;
+$gray-darkest:			 #2b3036 !default;
 $gray-darker:            #3b4246 !default;
 $gray-dark:              #4c5457 !default;
 $gray:                   #8f9194 !default;
 $gray-light:             #b5b6b8 !default;
 $gray-lighter:           #dbdcdd !default;
-
-
-
-$gray-lightest:			     #eeeeef !default;
-$gray-darkest:			     #2b3036 !default;
-$blue-lighter:			     #c6e9f5 !default;
-$blue-light:			       #71c9e7 !default;
-$blue:					         #009dd3 !default;
-$blue-dark:				       #087399 !default;
-$blue-darker:			       #0e5772 !default;
-$white:					         #ffffff !default;
-$red:					           #c62a3d !default;
-$red-orange:			       #d45a28 !default;
-$red-orange-dark:		     #ad4e27 !default;
-$orange:				         #f59d4c !default;
-$yellow:				         #ecc44d !default;
-$green:					         #5a9e5a !default;
-$green-dark:			       #487a4b !default;
-$teal:					         #32838c !default;
-$purple:				         #814481 !default;
+$gray-lightest:			 #eeeeef !default;
+$blue-lighter:			 #c6e9f5 !default;
+$blue-light:			 #71c9e7 !default;
+$blue:					 #009dd3 !default;
+$blue-dark:				 #087399 !default;
+$blue-darker:			 #0e5772 !default;
+$white:					 #ffffff !default;
+$red:					 #c62a3d !default;
+$red-orange:			 #d45a28 !default;
+$red-orange-dark:		 #ad4e27 !default;
+$orange:				 #f59d4c !default;
+$yellow:				 #ecc44d !default;
+$green:					 #5a9e5a !default;
+$green-dark:			 #487a4b !default;
+$teal:					 #32838c !default;
+$purple:				 #814481 !default;
 
 $brand-primary:          $blue !default;
 $brand-success:          $green-dark !default;
@@ -61,7 +58,7 @@ $link-hover-color:      $blue-dark !default;
 //** Link hover decoration.
 $link-hover-decoration: underline !default;
 //** Focus color
-$focus-color: $brand-primary !default;
+$focus-color: $blue-dark !default;
 
 //== Typography
 //
@@ -109,7 +106,6 @@ $icon-font-path: if($bootstrap-sass-asset-helper, "bootstrap/", "../fonts/bootst
 $icon-font-name:          "glyphicons-halflings-regular" !default;
 //** Element ID within SVG icon file.
 $icon-font-svg-id:        "glyphicons_halflingsregular" !default;
-
 //** File name for all Ozone font files.
 $icon-font-name-2:          "icons" !default;
 
@@ -236,8 +232,8 @@ $input-height-large:             (ceil($font-size-large * $line-height-large) + 
 //** Small `.form-control` height
 $input-height-small:             (floor($font-size-small * $line-height-small) + ($padding-small-vertical * 2) + 2) !default;
 
-$legend-color:                   $gray-dark !default;
-$legend-border-color:            $gray-light !default;
+$legend-color:                   $input-color !default;
+$legend-border-color:            $input-border !default;
 
 //** Background color for textual input addons
 $input-group-addon-bg:           $gray-lightest !default;
@@ -255,9 +251,9 @@ $cursor-disabled:                not-allowed !default;
 //** Background for the dropdown menu.
 $dropdown-bg:                    $body-bg !default;
 //** Dropdown menu 'border-color'.
-$dropdown-border:                $gray-lighter !default;
+$dropdown-border:                $gray-light !default;
 //** Dropdown menu 'border-color' **for IE8**.
-$dropdown-fallback-border:       $gray-lighter !default;
+$dropdown-fallback-border:       $gray-light !default;
 //** Divider color for between dropdown items.
 $dropdown-divider-bg:            $gray-lighter !default;
 //** Background color for highlighted dropdown items.
@@ -268,7 +264,7 @@ $dropdown-link-color:            $text-color !default;
 //** Hover color for dropdown links.
 $dropdown-link-hover-color:      $text-color !default;
 //** Hover background for dropdown links.
-$dropdown-link-hover-bg:         transparent !default;
+$dropdown-link-hover-bg:         $dropdown-bg !default;
 
 //** Active dropdown menu item text color.
 $dropdown-link-active-color:     $blue !default;
@@ -349,9 +345,9 @@ $grid-columns:              12 !default;
 $grid-gutter-width:         30px !default;
 // Navbar collapse
 //** Point at which the navbar becomes uncollapsed.
-$grid-float-breakpoint:     $screen-sm-min !default;
+$grid-float-breakpoint:     0; // $screen-xs !default;
 //** Point at which the navbar begins collapsing.
-$grid-float-breakpoint-max: ($grid-float-breakpoint - 1) !default;
+$grid-float-breakpoint-max: 0; // ($grid-float-breakpoint - 1) !default;
 
 
 //== Container sizes
@@ -379,7 +375,7 @@ $container-lg:                 $container-large-desktop !default;
 //##
 
 // Basics of a navbar
-$navbar-height:                    50px !default;
+$navbar-height:                    40px !default;
 $navbar-margin-bottom:             $line-height-computed !default;
 $navbar-border-radius:             $border-radius-base !default;
 $navbar-padding-horizontal:        floor(($grid-gutter-width / 2)) !default;
@@ -398,6 +394,8 @@ $navbar-default-link-active-color:         $blue !default;
 $navbar-default-link-active-bg:            transparent !default;
 $navbar-default-link-disabled-color:       $gray !default;
 $navbar-default-link-disabled-bg:          transparent !default;
+$navbar-default-link-highlight-color:      $text-color !default;
+$navbar-default-link-highlight-bg:         $blue !default;
 
 // Navbar brand label
 $navbar-default-brand-color:               $navbar-default-link-color !default;
@@ -441,20 +439,21 @@ $navbar-inverse-toggle-border-color:        $navbar-inverse-border !default;
 //##
 
 //=== Shared nav styles
-$nav-link-padding-side:                     15px !default;
+$nav-link-padding-side:                     10px !default;
 $nav-link-padding-vertical:                 10px !default;
 $nav-link-padding:                          $nav-link-padding-vertical $nav-link-padding-side !default;
-$nav-link-hover-bg:                         $gray-lightest !default;
-$nav-link-bg:                               $white !default;
+$nav-link-hover-bg:                         $body-bg !default;
+$nav-link-bg:                               $body-bg !default;
 
 $nav-disabled-link-color:                   $gray !default;
 $nav-disabled-link-hover-color:             $gray !default;
+
 //== Tabs
 $nav-tabs-border-color:                     $gray-lighter !default;
 
 $nav-tabs-link-hover-border-color:          $blue !default;
 
-$nav-tabs-active-link-hover-bg:             $white !default;
+$nav-tabs-active-link-hover-bg:             $body-bg !default;
 $nav-tabs-active-link-hover-color:          $gray-darker !default;
 $nav-tabs-active-link-hover-border-color:   $blue-dark !default;
 
@@ -474,20 +473,20 @@ $nav-pills-active-link-hover-color:         $component-active-color !default;
 //
 //##
 
-$pagination-color:                     $gray-dark !default;
+$pagination-color:                     $text-color !default;
 $pagination-bg:                        $body-bg !default;
-$pagination-border:                    $gray-dark !default;
+$pagination-border:                    $text-color !default;
 
-$pagination-hover-color:               $brand-primary !default;
+$pagination-hover-color:               $text-color !default;
 $pagination-hover-bg:                  $body-bg !default;
-$pagination-hover-border:              $brand-primary !default;
+$pagination-hover-border:              $link-color !default;
 
-$pagination-active-color:              $blue-darker !default;
-$pagination-active-bg:                 $blue-lighter !default;
-$pagination-active-border:             $blue-darker !default;
+$pagination-active-color:              $link-color !default;
+$pagination-active-bg:                 $body-bg !default;
+$pagination-active-border:             $link-color !default;
 
 $pagination-disabled-color:            $gray-dark !default;
-$pagination-disabled-bg:               $gray-lighter !default;
+$pagination-disabled-bg:               $body-bg !default;
 $pagination-disabled-border:           $gray-dark !default;
 
 
@@ -527,7 +526,7 @@ $state-success-bg:               $green-dark !default;
 $state-success-border:           darken(adjust-hue($state-success-bg, -10), 5%) !default;
 
 $state-info-text:                $white !default;
-$state-info-bg:                  $blue !default;
+$state-info-bg:                  $blue-dark !default;
 $state-info-border:              darken(adjust-hue($state-info-bg, -10), 7%) !default;
 
 $state-warning-text:             $white !default;
@@ -546,10 +545,10 @@ $state-danger-border:            darken(adjust-hue($state-danger-bg, -10), 5%) !
 //** Tooltip max width
 $tooltip-max-width:           200px !default;
 //** Tooltip text color
-$tooltip-color:               $white !default;
+$tooltip-color:               $state-info-text !default;
 //** Tooltip background color
-$tooltip-bg:                  $blue !default;
-$tooltip-opacity:             .9 !default;
+$tooltip-bg:                  $state-info-bg !default;
+$tooltip-opacity:             1 !default;
 
 //** Tooltip arrow width
 $tooltip-arrow-width:         5px !default;
@@ -614,10 +613,10 @@ $label-link-hover-color:      $white !default;
 //##
 
 //** Padding applied to the modal body
-$modal-inner-padding:         15px !default;
+$modal-inner-padding:         30px !default;
 
 //** Padding applied to the modal title
-$modal-title-padding:         15px !default;
+$modal-title-padding:         30px !default;
 //** Modal title line-height
 $modal-title-line-height:     $line-height-base !default;
 
@@ -632,11 +631,11 @@ $modal-content-fallback-border-color:          $gray-lighter !default;
 //** Modal backdrop background color
 $modal-backdrop-bg:           $gray-base !default;
 //** Modal backdrop opacity
-$modal-backdrop-opacity:      .5 !default;
+$modal-backdrop-opacity:      .75 !default;
 //** Modal header border color
-$modal-header-border-color:   $gray-lighter !default;
+$modal-header-border-color:   $modal-content-border-color !default;
 //** Modal footer border color
-$modal-footer-border-color:   $modal-header-border-color !default;
+$modal-footer-border-color:   $modal-content-border-color !default;
 
 $modal-lg:                    900px !default;
 $modal-md:                    600px !default;
@@ -771,9 +770,9 @@ $panel-danger-heading-bg:     $state-danger-bg !default;
 //** Padding around the thumbnail image
 $thumbnail-padding:           4px !default;
 //** Thumbnail background color
-$thumbnail-bg:                $body-bg !default;
+$thumbnail-bg:                transparent !default;
 //** Thumbnail border color
-$thumbnail-border:            $gray-lighter !default;
+$thumbnail-border:            transparent !default;
 //** Thumbnail border radius
 $thumbnail-border-radius:     $border-radius-base !default;
 
@@ -803,7 +802,7 @@ $badge-bg:                    $gray-dark !default;
 //** Badge text color in active nav link
 $badge-active-color:          $white !default;
 //** Badge background color in active nav link
-$badge-active-bg:             $brand-primary !default;
+$badge-active-bg:             $brand-info !default;
 
 $badge-font-weight:           300 !default;
 $badge-line-height:           1 !default;
@@ -819,9 +818,9 @@ $breadcrumb-padding-horizontal: 15px !default;
 //** Breadcrumb background color
 $breadcrumb-bg:                 $gray-lightest !default;
 //** Breadcrumb text color
-$breadcrumb-color:              $gray-dark !default;
+$breadcrumb-color:              $gray-darker !default;
 //** Text color of current page in the breadcrumb
-$breadcrumb-active-color:       $blue-darker !default;
+$breadcrumb-active-color:       $blue-dark !default;
 //** Textual separator for between breadcrumb elements
 $breadcrumb-separator:          "/" !default;
 
