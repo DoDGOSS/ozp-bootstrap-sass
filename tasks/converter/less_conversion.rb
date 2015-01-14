@@ -93,7 +93,7 @@ class Converter
             file = extract_nested_rule file, "#{SELECTOR_RE}&\\.in"
           when 'responsive-utilities.less'
             file = apply_mixin_parent_selector file, '\.(?:visible|hidden)'
-          when 'variables.less'
+          when 'variables.less', 'variables-dark.less'
             file = insert_default_vars(file)
             file = unindent <<-SCSS + "\n" + file, 14
               // When true, asset path helpers are used, otherwise the regular CSS `url()` is used.
