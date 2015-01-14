@@ -13,28 +13,28 @@ $bootstrap-sass-asset-helper: (twbs-font-path("") != unquote('twbs-font-path("")
 //## Gray and brand colors for use across Bootstrap.
 
 $gray-base:              #191f25 !default;
-$gray-darkest:			 #2b3036 !default;
+$gray-darkest:           #2b3036 !default;
 $gray-darker:            #3b4246 !default;
 $gray-dark:              #4c5457 !default;
 $gray:                   #8f9194 !default;
 $gray-light:             #b5b6b8 !default;
 $gray-lighter:           #dbdcdd !default;
-$gray-lightest:			 #eeeeef !default;
-$blue-lighter:			 #c6e9f5 !default;
-$blue-light:			 #71c9e7 !default;
-$blue:					 #009dd3 !default;
-$blue-dark:				 #087399 !default;
-$blue-darker:			 #0e5772 !default;
-$white:					 #ffffff !default;
-$red:					 #c62a3d !default;
-$red-orange:			 #d45a28 !default;
-$red-orange-dark:		 #ad4e27 !default;
-$orange:				 #f59d4c !default;
-$yellow:				 #ecc44d !default;
-$green:					 #5a9e5a !default;
-$green-dark:			 #487a4b !default;
-$teal:					 #32838c !default;
-$purple:				 #814481 !default;
+$gray-lightest:          #eeeeef !default;
+$blue-lighter:           #c6e9f5 !default;
+$blue-light:             #71c9e7 !default;
+$blue:                   #009dd3 !default;
+$blue-dark:              #087399 !default;
+$blue-darker:            #0e5772 !default;
+$white:                  #ffffff !default;
+$red:                    #c62a3d !default;
+$red-orange:             #d45a28 !default;
+$red-orange-dark:        #ad4e27 !default;
+$orange:                 #f59d4c !default;
+$yellow:                 #ecc44d !default;
+$green:                  #5a9e5a !default;
+$green-dark:             #487a4b !default;
+$teal:                   #32838c !default;
+$purple:                 #814481 !default;
 
 $brand-primary:          $blue !default;
 $brand-success:          $green-dark !default;
