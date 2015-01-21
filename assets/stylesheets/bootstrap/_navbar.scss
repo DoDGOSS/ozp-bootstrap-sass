@@ -237,6 +237,10 @@
     padding-top:    10px;
     padding-bottom: 10px;
     line-height: $line-height-computed;
+    
+    .active {
+      color: $navbar-default-link-active-color;
+    }
   }
 
   @media (max-width: $grid-float-breakpoint-max) {
@@ -492,15 +496,16 @@
   .navbar-nav {
     > .open > a {
         background-color: $dropdown-bg;
-        border-top: 4px solid transparent;
+        border-top: 4px solid $navbar-default-link-active-color;
         padding-top: ($navbar-padding-vertical - 4px);
+        color: $navbar-default-link-active-color;
       
       &,
       &:hover,
       &:focus {
         background-color: $dropdown-bg;
-        color: $navbar-default-link-color;
-        border-top-color: transparent;
+        color: $navbar-default-link-active-color;
+        border-top-color: $navbar-default-link-active-color;
       }
     }
 
