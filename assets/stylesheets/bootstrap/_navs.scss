@@ -49,7 +49,8 @@
     &,
     &:hover,
     &:focus {
-      background-color: $nav-link-bg;
+      background-color: $dropdown-bg;
+      color: $dropdown-link-color;
       border-color: $nav-tabs-border-color;
       border-top: 4px solid $nav-tabs-active-link-hover-border-color;
       padding-top: ($nav-link-padding-vertical - 3px);
@@ -79,7 +80,7 @@
 
 // Give the tabs something to sit on
 .nav-tabs {
-  border-bottom: 4px solid $nav-tabs-border-color;
+  border-bottom: 4px solid $nav-tabs-active-link-hover-bg;
   padding-left: 30px;
   > li {
     float: left;
