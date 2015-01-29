@@ -249,15 +249,15 @@ $cursor-disabled:                not-allowed !default;
 //## Dropdown menu container and contents
 
 //** Background for the dropdown menu.
-$dropdown-bg:                    $gray-lightest !default;
+$dropdown-bg:                    $gray-lighter !default;
 //** Dropdown menu 'border-color'.
-$dropdown-border:                $gray-light !default;
+$dropdown-border:                $gray-lighter !default;
 //** Dropdown menu 'border-color' **for IE8**.
-$dropdown-fallback-border:       $gray-light !default;
+$dropdown-fallback-border:       $gray-lightest !default;
 //** Divider color for between dropdown items.
-$dropdown-divider-bg:            $gray-lighter !default;
+$dropdown-divider-bg:            $gray-lightest !default;
 //** Background color for highlighted dropdown items.
-$dropdown-caboose-bg:            $gray-light !default;
+$dropdown-caboose-bg:            $gray-lightest !default;
 
 //** Dropdown link text color.
 $dropdown-link-color:            $text-color !default;
@@ -265,21 +265,48 @@ $dropdown-link-color:            $text-color !default;
 $dropdown-link-hover-color:      $text-color !default;
 //** Hover background for dropdown links.
 $dropdown-link-hover-bg:         $dropdown-bg !default;
-
 //** Active dropdown menu item text color.
 $dropdown-link-active-color:     $blue-dark !default;
 //** Active dropdown menu item background color.
 $dropdown-link-active-bg:        $dropdown-bg !default;
-
 //** Disabled dropdown menu item background color.
 $dropdown-link-disabled-color:   $gray !default;
-
 //** Text color for headers within dropdown menus.
 $dropdown-header-color:          $blue-dark !default;
-
 //** Deprecated `$dropdown-caret-color` as of v3.1.0
 $dropdown-caret-color:           $text-color !default;
 
+//** Background for the dropdown menu.
+$dropdown-inverse-bg:            $gray-darker !default;
+//** Dropdown menu 'border-color'.
+$dropdown-inverse-border:        $gray-darker !default;
+//** Dropdown menu 'border-color' **for IE8**.
+$dropdown-inverse-fallback-border:  $gray-dark !default;
+//** Divider color for between dropdown items.
+$dropdown-inverse-divider-bg:    $gray-darkest !default;
+//** Background color for highlighted dropdown items.
+$dropdown-inverse-caboose-bg:    $gray-dark !default;
+
+//** Dropdown link text color.
+$dropdown-inverse-link-color:            $gray-lightest !default;
+//** Hover color for dropdown links.
+$dropdown-inverse-link-hover-color:      $white !default;
+//** Hover background for dropdown links.
+$dropdown-inverse-link-hover-bg:         transparent !default;
+
+//** Active dropdown menu item text color.
+$dropdown-inverse-link-active-color:     $blue !default;
+//** Active dropdown menu item background color.
+$dropdown-inverse-link-active-bg:        $dropdown-inverse-bg !default;
+
+//** Disabled dropdown menu item background color.
+$dropdown-inverse-link-disabled-color:   $gray !default;
+
+//** Text color for headers within dropdown menus.
+$dropdown-inverse-header-color:          $blue !default;
+
+//** Deprecated `$dropdown-caret-color` as of v3.1.0
+$dropdown-inverse-caret-color:           $white !default;
 
 //-- Z-index master list
 //
@@ -382,20 +409,20 @@ $navbar-padding-horizontal:        floor(($grid-gutter-width / 2)) !default;
 $navbar-padding-vertical:          (($navbar-height - $line-height-computed) / 2) !default;
 $navbar-collapse-max-height:       340px !default;
 
-$navbar-default-color:             $text-color !default;
-$navbar-default-bg:                $body-bg !default;
-$navbar-default-border:            $gray-lighter !default;
+$navbar-default-color:             $gray-darker !default;
+$navbar-default-bg:                $gray-lightest !default;
+$navbar-default-border:            $gray-lightest !default;
 
 // Navbar links
-$navbar-default-link-color:                $text-color !default;
-$navbar-default-link-hover-color:          $text-color !default;
+$navbar-default-link-color:                $gray-darker !default;
+$navbar-default-link-hover-color:          $gray-darkest !default;
 $navbar-default-link-hover-bg:             transparent !default;
 $navbar-default-link-active-color:         $blue-dark !default;
 $navbar-default-link-active-bg:            transparent !default;
 $navbar-default-link-disabled-color:       $gray !default;
 $navbar-default-link-disabled-bg:          transparent !default;
-$navbar-default-link-highlight-color:      $text-color !default;
-$navbar-default-link-highlight-bg:         $blue-dark !default;
+$navbar-default-link-highlight-color:      $gray-darkest !default;
+$navbar-default-link-highlight-bg:         $gray-light !default;
 
 // Navbar brand label
 $navbar-default-brand-color:               $navbar-default-link-color !default;
@@ -403,30 +430,32 @@ $navbar-default-brand-hover-color:         $navbar-default-link-hover-color !def
 $navbar-default-brand-hover-bg:            transparent !default;
 
 // Navbar toggle
-$navbar-default-toggle-hover-bg:           $body-bg !default;
-$navbar-default-toggle-icon-bar-bg:        $body-bg !default;
-$navbar-default-toggle-border-color:       $gray-lighter !default;
+$navbar-default-toggle-hover-bg:           transparent !default;
+$navbar-default-toggle-icon-bar-bg:        $white !default;
+$navbar-default-toggle-border-color:       $blue-dark !default;
 
 
 // Inverted navbar
 // Reset inverted navbar basics
-$navbar-inverse-color:                      $navbar-default-color !default;
-$navbar-inverse-bg:                         $navbar-default-bg !default;
-$navbar-inverse-border:                     $navbar-default-border !default;
+$navbar-inverse-color:                      $white !default;
+$navbar-inverse-bg:                         $gray-darkest !default;
+$navbar-inverse-border:                     $gray-darkest !default;
 
 // Inverted navbar links
-$navbar-inverse-link-color:                 $navbar-default-link-color !default;
-$navbar-inverse-link-hover-color:           $navbar-default-link-hover-color !default;
-$navbar-inverse-link-hover-bg:              $navbar-default-link-hover-bg !default;
-$navbar-inverse-link-active-color:          $navbar-default-link-active-color !default;
-$navbar-inverse-link-active-bg:             $navbar-default-link-active-bg !default;
-$navbar-inverse-link-disabled-color:        $navbar-default-link-disabled-color !default;
-$navbar-inverse-link-disabled-bg:           $navbar-default-link-disabled-bg !default;
+$navbar-inverse-link-color:                 $gray-lighter !default;
+$navbar-inverse-link-hover-color:           $white !default;
+$navbar-inverse-link-hover-bg:              transparent !default;
+$navbar-inverse-link-active-color:          $blue !default;
+$navbar-inverse-link-active-bg:             transparent !default;
+$navbar-inverse-link-disabled-color:        $gray !default;
+$navbar-inverse-link-disabled-bg:           transparent !default;
+$navbar-inverse-link-highlight-color:       $white !default;
+$navbar-inverse-link-highlight-bg:          transparent !default;
 
 // Inverted navbar brand label
-$navbar-inverse-brand-color:                $navbar-default-brand-color !default;
-$navbar-inverse-brand-hover-color:          $navbar-default-brand-hover-color !default;
-$navbar-inverse-brand-hover-bg:             $navbar-default-brand-hover-bg !default;
+$navbar-inverse-brand-color:                $navbar-inverse-link-color !default;
+$navbar-inverse-brand-hover-color:          $navbar-inverse-link-hover-color !default;
+$navbar-inverse-brand-hover-bg:             transparent !default;
 
 // Inverted navbar toggle
 $navbar-inverse-toggle-hover-bg:            $navbar-inverse-bg !default;
