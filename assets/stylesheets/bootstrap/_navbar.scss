@@ -590,6 +590,19 @@
   }
   
   .navbar-nav {
+    
+    & li:hover, & li:hover, & ul.dropdown-menu > li > a:hover{
+      border-left-color: $navbar-inverse-link-active-color !important;
+    }
+    
+    & a:hover, & a:focus{
+      border-top-color: $navbar-inverse-link-active-color !important;
+    }
+    
+    ul.dropdown-menu > li > a > i:hover, ul.dropdown-menu > li > a > i:focus{
+      color:$navbar-inverse-link-hover-color !important;
+    }
+    
     > li > a {
       color: $navbar-inverse-link-color;
       border-top: 4px solid transparent;
@@ -673,8 +686,11 @@
       > li.divider {
           background-color:$dropdown-inverse-divider-bg !important;
       }
+      > li {
+        color: $navbar-inverse-link-color !important;
+        background-color: $dropdown-inverse-bg !important;
+      }
       > li > a {
-        font-weight: 300 !important;
         color: $navbar-inverse-link-color !important;
         background-color: $dropdown-inverse-bg !important;
         &:hover,
