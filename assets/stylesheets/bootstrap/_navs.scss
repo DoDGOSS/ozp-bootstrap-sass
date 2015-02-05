@@ -38,7 +38,7 @@
       &:focus {
         color: $nav-disabled-link-hover-color;
         text-decoration: none;
-        background-color: transparent;
+        background-color: $navbar-default-link-disabled-bg;
         cursor: $cursor-disabled;
       }
     }
@@ -97,7 +97,9 @@
       border-radius: $border-radius-base $border-radius-base 0 0;
       border-bottom: 3px transparent !important;
       color: $text-color;
-      &:hover {
+      background-color:$nav-tabs-active-link-hover-bg;
+      &:hover, &:focus {
+        background-color:$nav-tabs-active-link-hover-bg;
         border-top: 4px solid $nav-tabs-active-link-hover-border-color;
         padding-top: ($nav-link-padding-vertical - 3px);
       }
@@ -109,7 +111,7 @@
       &:hover,
       &:focus {
         color: $nav-tabs-active-link-hover-border-color;
-        background-color: $nav-tabs-active-link-hover-bg;
+        background-color: $nav-link-bg;
         border-bottom-color: transparent;
         cursor: default;
         border-top: 4px solid $nav-tabs-active-link-hover-border-color;
@@ -135,9 +137,10 @@
     > a {
       border-radius: $nav-pills-border-radius;
       color: $text-color;
-      background: $nav-link-bg;
+      background-color: $nav-tabs-active-link-hover-bg;
       &:hover,
       &:focus {
+        background-color: $nav-tabs-active-link-hover-bg;
         border-top: 4px solid $nav-tabs-active-link-hover-border-color;
         padding-top: ($nav-link-padding-vertical - 4px);
       }
@@ -148,11 +151,11 @@
 
     // Active state
     &.active > a {
+      background-color: $nav-link-bg;
       &,
       &:hover,
       &:focus {
         color: $nav-tabs-active-link-hover-border-color;
-        background-color: $nav-link-bg;
         border-top: 4px solid $nav-tabs-active-link-hover-border-color;
         padding-top: ($nav-link-padding-vertical - 4px);
       }
@@ -166,6 +169,12 @@
   > li {
     float: none;
     border: 0;
+    background-color: $nav-link-bg;
+    
+    &:hover,
+    &:focus {
+      background-color: $nav-link-bg;
+    }
     
     > a {
       
@@ -187,6 +196,7 @@
       &,
       &:hover,
       &:focus {
+        background-color: $nav-link-bg;
         color: $nav-tabs-active-link-hover-border-color;
         border:0;
         padding: $nav-link-padding;
