@@ -118,6 +118,10 @@
   .btn-block + .btn-block {
     margin-left: 0;
   }
+  
+  .btn-link {
+      color: $btn-modal-ft !important;
+  }
 }
 
 // Measure scrollbar width for padding body during modal show/hide
