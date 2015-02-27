@@ -273,6 +273,15 @@
 }
 
 // Individual icons
+
+.icon-thumbs-up:before          { content: "\e60a"; }
+.icon-star-filled:before        { content: "\e60b"; }
+.icon-microphone-off:before     { content: "\e60c"; }
+.icon-microphone-filled:before  { content: "\e60d"; }
+.icon-headphones:before         { content: "\e60e"; }
+.icon-exclamation:before        { content: "\e60f"; }
+.icon-ribbon-filled:before      { content: "\e610"; }
+.icon-lightbulb:before          { content: "\e611"; }
 .icon-type:before               { content: "\e608"; }
 .icon-pencil:before             { content: "\e609"; }
 .icon-bell-filled:before        { content: "\e600"; }
