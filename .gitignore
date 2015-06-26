@@ -18,3 +18,6 @@ test/dummy_rails/public/assets/
 .DS_Store
 node_modules
 *.codekit
+
+assets/stylesheets/bootstrap/_bootstrap-dark.scss
+assets/stylesheets/bootstrap/_bootstrap.scss
