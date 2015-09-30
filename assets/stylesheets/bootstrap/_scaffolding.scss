@@ -22,6 +22,9 @@
 html {
   font-size: 10px;
   -webkit-tap-highlight-color: rgba(25,31,37,0);
+
+  // Prevent scrollbar from overlapping content on IE10+
+  -ms-overflow-style: scrollbar; 
 }
 
 body {
