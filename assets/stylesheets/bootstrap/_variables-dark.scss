@@ -170,9 +170,9 @@ $table-border-color:            $gray-darker !default;
 
 $btn-font-weight:                300 !default;
 
-$btn-default-color:              $gray-lightest !default;
-$btn-default-bg:                 $gray-darker !default;
-$btn-default-border:             $gray-darkest !default;
+$btn-default-color:              $gray-darker !default;
+$btn-default-bg:                 $white !default;
+$btn-default-border:             $gray-light !default;
 
 $btn-primary-color:              $white !default;
 $btn-primary-bg:                 $brand-primary !default;
@@ -196,22 +196,24 @@ $btn-danger-border:              darken($btn-danger-bg, 5%) !default;
 
 $btn-link-disabled-color:        $gray-light !default;
 
-$btn-modal-ft:                   $white !default;
+$btn-modal-ft:                   $blue-darker !default;
 
 
 //== Forms
 //
 //##
 
-//** `<input>` background color
-$input-bg:                       $gray-darkest !default;
+//** `<input>` background color  
+$input-bg:                       $white !default; //$gray-darkest 
 //** `<input disabled>` background color
-$input-bg-disabled:              $gray-dark !default;
-
+$input-bg-disabled:              $gray-light !default; //$gray-dark 
 //** Text color for `<input>`s
-$input-color:                    $gray-lightest !default;
+$input-color:                    $gray-darker !default; //$gray-lightest 
 //** `<input>` border color
-$input-border:                   $gray-darker !default;
+$input-border:                   $gray-light !default; //$gray-darker
+
+//** Placeholder text color
+$input-color-placeholder:        $gray-dark !default; //$gray-lightest
 
 // TODO: Rename `$input-border-radius` to `$input-border-radius-base` in v4
 //** Default `.form-control` border radius
@@ -224,9 +226,6 @@ $input-border-radius-small:      $border-radius-small !default;
 //** Border color for inputs on focus
 $input-border-focus:             $blue !default;
 
-//** Placeholder text color
-$input-color-placeholder:        $gray-lightest !default;
-
 //** Default `.form-control` height
 $input-height-base:              ($line-height-computed + ($padding-base-vertical * 2) + 2) !default;
 //** Large `.form-control` height
@@ -238,7 +237,7 @@ $legend-color:                   $input-color !default;
 $legend-border-color:            $input-border !default;
 
 //** Background color for textual input addons
-$input-group-addon-bg:           $gray-darker !default;
+$input-group-addon-bg:           $input-border !default;
 //** Border color for textual input addons
 $input-group-addon-border-color: $input-border !default;
 
@@ -658,8 +657,10 @@ $modal-title-padding:         30px !default;
 $modal-title-line-height:     $line-height-base !default;
 
 //** Background color of modal content area
-$modal-content-bg:                             $gray-darker !default;
-$modal-body-bg:                                $gray-darkest !default;
+$modal-content-bg:                             $gray-lighter !default;
+$modal-body-bg:                                $white !default;
+//** Text color of modal content area
+$modal-content-text-color:                     $gray-darker !default;
 //** Modal content border color
 $modal-content-border-color:                   transparent !default;
 //** Modal content border color **for IE8**
@@ -884,7 +885,7 @@ $carousel-caption-color:                      $white !default;
 //##
 
 $close-font-weight:           normal !default;
-$close-color:                 $gray-light !default;
+$close-color:                 $gray-dark !default;
 $close-text-shadow:           none !default;
 
 

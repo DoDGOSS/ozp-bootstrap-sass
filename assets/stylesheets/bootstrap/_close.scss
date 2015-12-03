@@ -5,10 +5,11 @@
 
 .close {
   float: right;
+  // text settings no longer used because of image icons
   font-size: ($font-size-base * 1.5);
   font-weight: $close-font-weight;
   line-height: 1;
-  color: $text-color;
+  color: $close-color; 
   text-shadow: $close-text-shadow;
 
   &:hover,
