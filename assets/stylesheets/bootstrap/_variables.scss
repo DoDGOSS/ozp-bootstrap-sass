@@ -213,6 +213,9 @@ $input-color:                    $gray-darker !default;
 //** `<input>` border color
 $input-border:                   $gray-light !default;
 
+//** Placeholder text color
+$input-color-placeholder:        $gray-dark !default;
+
 // TODO: Rename `$input-border-radius` to `$input-border-radius-base` in v4
 //** Default `.form-control` border radius
 $input-border-radius:            $border-radius-base !default;
@@ -223,10 +226,6 @@ $input-border-radius-small:      $border-radius-small !default;
 
 //** Border color for inputs on focus
 $input-border-focus:             $blue !default;
-
-//** Placeholder text color
-$input-color-placeholder:        $gray-dark !default;
-
 //** Default `.form-control` height
 $input-height-base:              ($line-height-computed + ($padding-base-vertical * 2) + 2) !default;
 //** Large `.form-control` height
@@ -238,7 +237,7 @@ $legend-color:                   $input-color !default;
 $legend-border-color:            $input-border !default;
 
 //** Background color for textual input addons
-$input-group-addon-bg:           $gray-lightest !default;
+$input-group-addon-bg:           $input-border !default;
 //** Border color for textual input addons
 $input-group-addon-border-color: $input-border !default;
 
@@ -653,10 +652,12 @@ $modal-title-line-height:     $line-height-base !default;
 //** Background color of modal content area
 $modal-content-bg:                             $gray-lighter !default;
 $modal-body-bg:                                $white !default;
+//** Text color of modal content area
+$modal-content-text-color:                     $text-color !default;
 //** Modal content border color
-$modal-content-border-color:                   $gray-lighter !default;
+$modal-content-border-color:                   transparent !default;
 //** Modal content border color **for IE8**
-$modal-content-fallback-border-color:          $gray-lighter !default;
+$modal-content-fallback-border-color:          transparent !default;
 
 //** Modal backdrop background color
 $modal-backdrop-bg:           $gray-base !default;
@@ -878,7 +879,7 @@ $carousel-caption-color:                      $white !default;
 
 $close-font-weight:           normal !default;
 $close-color:                 $gray-dark !default;
-$close-text-shadow:           0 1px 0 $gray-base !default;
+$close-text-shadow:           none !default;
 
 
 //== Code
