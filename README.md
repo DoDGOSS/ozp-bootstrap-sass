@@ -1,12 +1,17 @@
-# OZONE Custom SASS conversion from LESS
+This repo OZP-bootstrap-sass is now the sole bootstrap instance for the OZP project. As of 11/5/2015 ozp-webtop switched from ozp-bootstrap to ozp-bootstrap-sass. OZP-bootstrap is no longer being maintained.
 
-To convert our version of the bootstrap less found [here](https://github.com/ozone-development/bootstrap) you have to use Docker and a rails image to run a convert script provided by bootstrap-sass official. The script that you'll run (convert.rb) is already configured to pull from this repository, no additional configuration is required.
+----
 
-1. Install [docker](http://docker.com)
-1. Pull the rails docker repository `docker pull ozplatform/bootstrap-sass`
-1. `docker run -i -t -v $(pwd):/tmp/bootstrap ozplatform/bootstrap-sass`
 
-This has updated all changed files in the scss (found under assets). To make these available to all projects with ozp-bootstrap as a dependency, push to master.
+#### ~~OZONE Custom SASS conversion from LESS~~
+
+~~To convert our version of the bootstrap less found [here](https://github.com/ozone-development/bootstrap) you have to use Docker and a rails image to run a convert script provided by bootstrap-sass official. The script that you'll run (convert.rb) is already configured to pull from this repository, no additional configuration is required.~~
+
+1. ~~Install [docker](http://docker.com)~~
+1. ~~Pull the rails docker repository `docker pull ozplatform/bootstrap-sass`~~
+1. ~~`docker run -i -t -v $(pwd):/tmp/bootstrap ozplatform/bootstrap-sass`~~
+
+~~This has updated all changed files in the scss (found under assets). To make these available to all projects with ozp-bootstrap as a dependency, push to master.~~
 
 
 
