@@ -139,7 +139,7 @@
     // Links rendered as pills
     > a {
       border-radius: $nav-pills-border-radius;
-      color: $text-color;
+      color: $nav-tabs-active-link-color;
       background-color: $nav-tabs-active-link-hover-bg;
       &:hover,
       &:focus {

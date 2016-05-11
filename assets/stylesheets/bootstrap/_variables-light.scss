@@ -434,7 +434,7 @@ $navbar-inverse-toggle-border-color:        $navbar-inverse-border;
 
 //=== Shared nav styles
 $nav-link-padding:                          $nav-link-padding-vertical $nav-link-padding-side;
-$nav-link-padding-side:                     15px;
+$nav-link-padding-side:                     10px;
 $nav-link-padding-vertical:                 10px;
 $nav-link-hover-bg:                         $gray-lightest;
 $nav-link-bg:                               $white;
@@ -447,11 +447,11 @@ $nav-tabs-border-color:                     $gray-lighter;
 
 $nav-tabs-link-hover-border-color:          $blue;
 
-$nav-tabs-active-link-hover-bg:             $white;
+$nav-tabs-active-link-hover-bg:             $gray-lightest;
 $nav-tabs-active-link-hover-color:          $gray-darker;
-$nav-tabs-active-link-hover-border-color:   $blue-dark;
+$nav-tabs-active-link-hover-border-color:   $blue;
 
-$nav-tabs-active-link-color:                $blue-dark;
+$nav-tabs-active-link-color:                $gray-darker;
 
 $nav-tabs-justified-link-border-color:            $nav-tabs-border-color;
 $nav-tabs-justified-active-link-border-color:     $nav-tabs-active-link-hover-border-color;

@@ -485,15 +485,15 @@ $nav-disabled-link-color:                   $gray-light !default;
 $nav-disabled-link-hover-color:             $gray-light !default;
 
 //== Tabs
-$nav-tabs-border-color:                     $gray-darker !default;
+$nav-tabs-border-color:                     $gray-lighter;
 
-$nav-tabs-link-hover-border-color:          $blue !default;
+$nav-tabs-link-hover-border-color:          $blue;
 
-$nav-tabs-active-link-hover-bg:             $gray-darkest !default;
-$nav-tabs-active-link-hover-color:          $white !default;
-$nav-tabs-active-link-hover-border-color:   $blue !default;
+$nav-tabs-active-link-hover-bg:             $gray-lightest;
+$nav-tabs-active-link-hover-color:          $gray-darker;
+$nav-tabs-active-link-hover-border-color:   $blue;
 
-$nav-tabs-active-link-color:                $blue !default;
+$nav-tabs-active-link-color:                $gray-darker;
 
 $nav-tabs-justified-link-border-color:            $nav-tabs-border-color !default;
 $nav-tabs-justified-active-link-border-color:     $nav-tabs-active-link-hover-border-color !default;
