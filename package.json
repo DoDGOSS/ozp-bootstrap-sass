@@ -6,7 +6,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/twbs/bootstrap-sass"
+    "url": "git://github.com/ozoneplatform/ozp-bootstrap-sass"
   },
   "keywords": [
     "bootstrap",
@@ -21,7 +21,7 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/twbs/bootstrap-sass/issues"
+    "url": "https://github.com/ozoneplatform/ozp-bootstrap-sass/issues"
   },
   "devDependencies": {
     "node-sass": "~3.4.2",
