@@ -1,3 +1,6 @@
+## Interested in becoming a contributor? 
+Fork the code for this repository. Make your changes and submit a pull request. The Ozone team will review your pull request and evaluate if it should be part of the project. For more information on the patch process please review the Patch Process at https://ozone.nextcentury.com/patch_process.
+
 This repo OZP-bootstrap-sass is now the sole bootstrap instance for the OZP project. As of 11/5/2015 ozp-webtop switched from ozp-bootstrap to ozp-bootstrap-sass. OZP-bootstrap is no longer being maintained.
 
 ----
